@@ -2,7 +2,7 @@
 
 ## Background
 
-In semiconductor test engineering, V93K SMT7/8 test programs undergo frequent regression testing to ensure functionality and catch issues early in the development cycle. However, regression failures often follow predictable patterns - duplicate test numbers, missing patterns, build errors, runtime exceptions, and configuration issues. Currently, engineers spend significant time manually diagnosing and fixing these recurring issues, leading to delayed releases and reduced productivity. The V93K Regression Auto-Remediation System addresses this challenge by automatically analyzing regression results, identifying issues, and applying proven solutions with minimal human intervention.
+In semiconductor test engineering, V93K SMT7/8 test programs with latest modular baselines undergo frequent validations under regression to ensure functionality and catch issues early in the development cycle. However, regression failures often follow predictable patterns - known fails, integration issues, missing patterns, build errors, runtime errors and exceptions, double test numbers, missing test numbers, git cloning issues, space issues, machine down issues, API down issues, and configuration issues. Currently, engineers spend significant time manually diagnosing and fixing these recurring issues, leading to delayed releases and reduced productivity. The V93K Regression Auto-Remediation System addresses this challenge by automatically analyzing regression results, identifying issues, and applying proven solutions with minimal human intervention.
 
 ## What This Tool Does
 
@@ -51,27 +51,10 @@ The V93K Regression Auto-Remediation System is an intelligent automation platfor
 3. **Solution Review**: Review and approve high-risk solutions before application
 4. **Manual Triggers**: Manually trigger analysis for specific regression sessions
 5. **Feedback Provision**: Provide feedback on solution effectiveness to improve the system
-
-### For Development Teams
-1. **Pipeline Integration**: Integrate the system into your existing CI/CD workflows
-2. **Automated Fixes**: Benefit from automatic resolution of common issues
-3. **Faster Iterations**: Reduce time spent on manual issue resolution
-4. **Quality Improvement**: Maintain higher code quality through consistent issue resolution
-5. **Knowledge Sharing**: Leverage collective team knowledge through the solution database
-
-### For Team Leads and Managers
-1. **Progress Monitoring**: Track regression health and resolution metrics
-2. **Resource Optimization**: Reduce manual effort spent on repetitive issue resolution
-3. **Quality Metrics**: Monitor trends in issue types and resolution effectiveness
-4. **Team Productivity**: Measure improvements in development velocity
-5. **Risk Management**: Oversee automated changes and maintain quality standards
-
-### For DevOps Engineers
-1. **System Integration**: Configure integration with existing tools and pipelines
-2. **Performance Monitoring**: Monitor system performance and resource usage
-3. **Deployment Management**: Manage system updates and configuration changes
-4. **Security Oversight**: Ensure secure handling of code and sensitive information
-5. **Backup and Recovery**: Maintain system reliability and data protection
+6. **Faster Iterations**: Reduce time spent on manual issue resolution
+7. **Quality Improvement**: Maintain higher code quality through consistent issue resolution
+8. **Knowledge Sharing**: Leverage collective team knowledge through the solution database
+9. **Resource Optimization**: Reduce manual effort spent on repetitive issue resolution
 
 ## Benefits
 
@@ -106,7 +89,7 @@ The V93K Regression Auto-Remediation System is an intelligent automation platfor
 ## Technical Requirements
 
 ### System Requirements
-- **Operating System**: Linux (Ubuntu 20.04+ recommended) or containerized deployment
+- **Operating System**: Linux (Red Hat 7/8/9) or containerized deployment
 - **Memory**: Minimum 16GB RAM, 32GB+ recommended for production environments
 - **Storage**: SSD storage with 1TB+ available space for data and models
 - **CPU**: Multi-core processor (16+ cores recommended for production)
@@ -114,7 +97,7 @@ The V93K Regression Auto-Remediation System is an intelligent automation platfor
 
 ### Integration Requirements
 - **CI/CD Systems**: Jenkins, GitLab CI, GitHub Actions, or similar platforms
-- **Version Control**: Git-based repositories (GitHub, GitLab, Bitbucket)
+- **Version Control**: Git-based repositories (GitLab, Bitbucket)
 - **Issue Tracking**: JIRA, Azure DevOps, or similar project management tools
 - **Notification Systems**: Slack, Microsoft Teams, or email integration
 - **Monitoring Tools**: Prometheus, Grafana, or similar monitoring platforms
@@ -201,7 +184,6 @@ open http://localhost:3000
 - **Multi-language Support**: Extension to other test programming languages and platforms
 - **Predictive Analytics**: Proactive identification of potential issues before they occur
 - **Advanced Visualization**: Enhanced dashboards and analytics capabilities
-- **Mobile Interface**: Mobile app for monitoring and basic management functions
 
 ### Integration Roadmap
 - **Cloud Platforms**: Native support for AWS, Azure, and Google Cloud deployments
