@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regression Auto-Remediation System - Presentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        
+        .presentation {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .slide {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin: 30px 0;
+            padding: 40px;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .slide-header {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .slide-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .slide-subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            flex-grow: 1;
+            align-items: start;
+        }
+        
+        .content-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            background: #667eea;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .highlight-box {
+            background: #e8f4fd;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .roi-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #27ae60;
+            margin: 10px 0;
+        }
+        
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefit-list li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .benefit-list li:before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .tech-badge {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .timeline {
+            background: #f1f2f6;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        
+        .timeline-phase {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            min-width: 80px;
+            text-align: center;
+            margin-right: 15px;
+        }
+        
+        .approval-section {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .approval-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 15px;
+        }
+        
+        .print-note {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #2c3e50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            z-index: 1000;
+        }
+        
+        @media print {
+            body { background: white; }
+            .print-note { display: none; }
+            .slide { 
+                page-break-after: always; 
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-note">Press Ctrl+P to print as PDF</div>
+    
+    <div class="presentation">
+        <!-- Slide 1: System Overview & Benefits -->
+        <div class="slide">
+            <div class="slide-header">
+                <h1 class="slide-title">🚀 Regression Auto-Remediation System</h1>
+                <p class="slide-subtitle">AI-Powered Automated Testing & Issue Resolution Platform</p>
+            </div>
+            
+            <div class="content-grid">
+                <div class="content-section">
+                    <h2 class="section-title">
+                        <span class="icon">💡</span>
+                        Solution Overview
+                    </h2>
+                    <p><strong>Intelligent automation platform</strong> that monitors V93K test program regression results, automatically identifies issues, and applies validated solutions with machine learning.</p>
+                    
+                    <div class="highlight-box">
+                        <div class="roi-number">70-80%</div>
+                        <p><strong>Reduction in manual regression resolution time</strong></p>
+                    </div>
+                    
+                    <ul class="benefit-list">
+                        <li><strong>Automated Issue Detection</strong> with 95%+ accuracy</li>
+                        <li><strong>Real-time Monitoring</strong> and notifications</li>
+                        <li><strong>Continuous Learning</strong> from baseline changes</li>
+                        <li><strong>Cross-platform Dashboard</strong> access</li>
+                        <li><strong>Oracle Database Integration</strong> with existing infrastructure</li>
+                    </ul>
+                </div>
+                
+                <div class="content-section">
+                    <h2 class="section-title">
+                        <span class="icon">⚙️</span>
+                        Technical Architecture
+                    </h2>
+                    <p><strong>Dual AI Model Approach:</strong></p>
+                    <ul style="margin-bottom: 20px;">
+                        <li><strong>Issue-Solution Learning Model:</strong> Pattern recognition and solution mapping</li>
+                        <li><strong>V93K Domain Knowledge Model:</strong> Specialized test program understanding</li>
+                    </ul>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python 3.12+</span>
+                        <span class="tech-badge">Oracle Database</span>
+                        <span class="tech-badge">React Dashboard</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">Hugging Face</span>
+                        <span class="tech-badge">PyTorch</span>
+                    </div>
+                    
+                    <div class="timeline">
+                        <h3 style="margin-top: 0; color: #2c3e50;">Implementation Timeline</h3>
+                        <div class="timeline-item">
+                            <span class="timeline-phase">Phase 1</span>
+                            <span>Core Infrastructure (4 weeks)</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-phase">Phase 2</span>
+                            <span>AI Models & Detection (4 weeks)</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-phase">Phase 3</span>
+                            <span>Dashboard & Integration (4 weeks)</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-phase">Phase 4</span>
+                            <span>Testing & Deployment (4 weeks)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 2: Business Case & Approval Request -->
+        <div class="slide">
+            <div class="slide-header">
+                <h1 class="slide-title">📊 Business Impact & ROI</h1>
+                <p class="slide-subtitle">Investment Justification & Resource Requirements</p>
+            </div>
+            
+            <div class="content-grid">
+                <div class="content-section">
+                    <h2 class="section-title">
+                        <span class="icon">💰</span>
+                        Financial Benefits
+                    </h2>
+                    
+                    <div class="highlight-box">
+                        <h3 style="margin: 0; color: #2c3e50;">Estimated Annual Savings</h3>
+                        <div class="roi-number">$240K+</div>
+                        <p style="margin: 0;"><em>Based on 2 hours/day × 5 engineers × $120/hour</em></p>
+                    </div>
+                    
+                    <ul class="benefit-list">
+                        <li><strong>Reduced Manual Labor:</strong> 70-80% time savings on regression issues</li>
+                        <li><strong>Faster Time-to-Market:</strong> Quicker identification and resolution</li>
+                        <li><strong>Improved Quality:</strong> Consistent, validated solutions</li>
+                        <li><strong>24/7 Monitoring:</strong> Issues caught outside business hours</li>
+                        <li><strong>Knowledge Retention:</strong> Institutional knowledge preserved in AI models</li>
+                        <li><strong>Scalability:</strong> Future Ultraflex platform support</li>
+                    </ul>
+                </div>
+                
+                <div class="content-section">
+                    <h2 class="section-title">
+                        <span class="icon">📋</span>
+                        Resource Requirements
+                    </h2>
+                    
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                        <h3 style="margin-top: 0; color: #2c3e50;">Development Team</h3>
+                        <ul>
+                            <li><strong>1 Senior ML Engineer</strong> (16 weeks)</li>
+                            <li><strong>1 Backend Developer</strong> (12 weeks)</li>
+                            <li><strong>1 Frontend Developer</strong> (8 weeks)</li>
+                            <li><strong>1 DevOps Engineer</strong> (4 weeks)</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                        <h3 style="margin-top: 0; color: #2c3e50;">Infrastructure</h3>
+                        <ul>
+                            <li><strong>Existing Oracle Database</strong> (no additional cost)</li>
+                            <li><strong>Linux Server Resources</strong> (minimal upgrade)</li>
+                            <li><strong>GPU Access</strong> for model training (cloud/on-premise)</li>
+                            <li><strong>Development Environment</strong> setup</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #e8f4fd; padding: 20px; border-radius: 10px;">
+                        <h3 style="margin-top: 0; color: #2c3e50;">Timeline & Milestones</h3>
+                        <ul style="margin: 0;">
+                            <li><strong>Week 4:</strong> Core infrastructure complete</li>
+                            <li><strong>Week 8:</strong> AI models trained and tested</li>
+                            <li><strong>Week 12:</strong> Dashboard and integration ready</li>
+                            <li><strong>Week 16:</strong> Full deployment and training complete</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="approval-section">
+                <div class="approval-title">📝 Seeking Approval</div>
+                <p><strong>Recommendation:</strong> Approve development of Regression Auto-Remediation System</p>
+                <p><strong>Expected ROI:</strong> 300%+ within first year through labor savings and efficiency gains</p>
+                <p><strong>Risk Level:</strong> Low - leverages existing infrastructure and proven AI technologies</p>
+                <p><strong>Strategic Value:</strong> Positions team as innovation leader in automated testing solutions</p>
+                
+                <div style="margin-top: 20px; padding: 15px; background: white; border-radius: 8px;">
+                    <strong>Next Steps:</strong> Upon approval, begin Phase 1 infrastructure setup and team resource allocation
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Print functionality
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+        
+        // Smooth scrolling for presentation navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((slide, index) => {
+                slide.addEventListener('click', function() {
+                    if (index < slides.length - 1) {
+                        slides[index + 1].scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

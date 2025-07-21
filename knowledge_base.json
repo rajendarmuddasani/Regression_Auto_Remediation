@@ -1,0 +1,103 @@
+{
+  "solutions": {
+    "contact_force_fix": {
+      "solution_id": "contact_force_fix",
+      "solution_type": "parameter_update",
+      "description": "Increase contact force to resolve contact resistance issues",
+      "code_changes": [],
+      "config_changes": [],
+      "parameter_changes": [
+        {
+          "parameter": "contact_force",
+          "value": "150mN"
+        }
+      ],
+      "category": "contact_failure",
+      "module_applicability": [
+        "CONTACT_TEST",
+        "CONTACT_VALIDATION"
+      ],
+      "baseline_versions": [],
+      "success_count": 9,
+      "failure_count": 1,
+      "confidence_score": 0.9299999999999999,
+      "created_date": "2025-07-21T20:51:32.025802",
+      "last_applied": "2025-07-21T20:51:32.025813",
+      "last_updated": "2025-07-21T20:51:32.025813"
+    },
+    "timeout_increase": {
+      "solution_id": "timeout_increase",
+      "solution_type": "config_change",
+      "description": "Increase test timeout for slow operations",
+      "code_changes": [],
+      "config_changes": [
+        {
+          "setting": "test_timeout",
+          "value": "600"
+        }
+      ],
+      "parameter_changes": [],
+      "category": "timeout",
+      "module_applicability": [
+        "ALL"
+      ],
+      "baseline_versions": [],
+      "success_count": 6,
+      "failure_count": 2,
+      "confidence_score": 0.7649999999999999,
+      "created_date": "2025-07-21T20:51:32.025808",
+      "last_applied": "2025-07-21T20:51:32.025830",
+      "last_updated": "2025-07-21T20:51:32.025831"
+    },
+    "include_header_fix": {
+      "solution_id": "include_header_fix",
+      "solution_type": "code_fix",
+      "description": "Add missing header include for undefined symbols",
+      "code_changes": [
+        {
+          "file": "*.cpp",
+          "change": "#include <missing_header.h>"
+        }
+      ],
+      "config_changes": [],
+      "parameter_changes": [],
+      "category": "compilation_error",
+      "module_applicability": [
+        "ALL"
+      ],
+      "baseline_versions": [],
+      "success_count": 13,
+      "failure_count": 0,
+      "confidence_score": 1.0,
+      "created_date": "2025-07-21T20:51:32.025810",
+      "last_applied": "2025-07-21T20:51:32.025841",
+      "last_updated": "2025-07-21T20:51:32.025841"
+    },
+    "calibration_reset": {
+      "solution_id": "calibration_reset",
+      "solution_type": "parameter_update",
+      "description": "Reset calibration parameters to factory defaults",
+      "code_changes": [],
+      "config_changes": [],
+      "parameter_changes": [
+        {
+          "parameter": "cal_reset",
+          "value": "true"
+        }
+      ],
+      "category": "calibration_error",
+      "module_applicability": [
+        "ALL"
+      ],
+      "baseline_versions": [],
+      "success_count": 7,
+      "failure_count": 1,
+      "confidence_score": 0.8524999999999999,
+      "created_date": "2025-07-21T20:51:32.025811",
+      "last_applied": "2025-07-21T20:51:32.025848",
+      "last_updated": "2025-07-21T20:51:32.025849"
+    }
+  },
+  "solution_history": [],
+  "saved_at": "2025-07-21T21:05:37.168818"
+}
