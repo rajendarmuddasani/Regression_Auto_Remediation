@@ -45,6 +45,71 @@ The Regression Auto-Remediation System is an intelligent automation platform tha
 3. Review current regression configuration
 4. Familiarize yourself with the interface
 
+### System Installation Options
+
+When setting up the system on a new laptop/environment, you have two installation options:
+
+#### Option 1: Automated Quick Setup (Recommended)
+This is the fastest and easiest way to get the system running:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/rajendarmuddasani/Regression_Auto_Remediation.git
+cd Regression_Auto_Remediation
+
+# 2. Run the automated setup script
+./quick_setup.sh
+
+# 3. Update .env with your database credentials
+# Edit the .env file with your Oracle database details
+
+# 4. Start the application
+./start_app.sh
+```
+
+**What this does:**
+- ✅ Automatically checks all prerequisites (Python 3.9+, Node.js 16+)
+- ✅ Creates Python virtual environment and installs all dependencies
+- ✅ Installs Node.js dependencies for the React frontend
+- ✅ Creates environment configuration template (.env file)
+- ✅ Generates startup scripts for easy application launch
+- ✅ Tests the installation and provides access URLs
+
+#### Option 2: Manual Setup (Advanced Users)
+For users who prefer step-by-step manual installation:
+
+```bash
+# Backend setup
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+# Frontend setup
+cd web_dashboard
+npm install
+cd ..
+
+# Configuration
+cp .env.example .env
+# Edit .env with your database settings
+
+# Start servers (requires 2 terminals)
+# Terminal 1: uvicorn src.api.main:app --reload --port 8000
+# Terminal 2: cd web_dashboard && npm run dev
+```
+
+**Important Note:** `requirements.txt` alone is not sufficient for a complete setup. You need:
+- Python dependencies (requirements.txt)
+- Node.js dependencies (package.json)
+- Environment configuration (.env file)
+- Database connectivity setup
+- Both backend and frontend servers running
+
+**Access URLs after setup:**
+- Frontend Dashboard: http://localhost:3000
+- Backend API: http://localhost:8000
+- API Documentation: http://localhost:8000/docs
+
 ---
 
 ## Dashboard Interface
@@ -334,6 +399,19 @@ A: Custom alerts can be configured in Settings > Notifications by administrators
 
 **Q: Can I see model learning progress?**
 A: Yes, the Analytics tab includes model performance metrics and learning curves.
+
+### Setup & Installation Questions
+
+**Q: Is requirements.txt enough to set up the system on a new laptop?**
+A: No, requirements.txt only contains Python dependencies. For a complete setup you need:
+- Python virtual environment + pip install -r requirements.txt
+- Node.js dependencies: cd web_dashboard && npm install
+- Environment configuration: Create .env file with database credentials
+- Start both servers: Backend (port 8000) and Frontend (port 3000)
+Use ./quick_setup.sh for automated installation or follow the manual setup guide.
+
+**Q: What are the system prerequisites for installation?**
+A: You need Python 3.9+, Node.js 16+, Git, and optionally Oracle Client for database connectivity. The quick_setup.sh script will check all prerequisites automatically.
 
 ---
 
